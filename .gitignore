@@ -72,6 +72,18 @@
 
 # CMake
 cmake-build-*/
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+*.cbp
 
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
@@ -107,5 +119,4 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 ### MacOS
-
 **/.DS_Store

@@ -6,6 +6,10 @@
 
 const double pi = 3.1415926535897932385;
 
+static inline double degreesToRadians(double degrees) {
+    return degrees * pi / 180.0;
+}
+
 class Camera {
 public:
     Camera(
@@ -35,10 +39,6 @@ public:
         lowerLeftCorner = origin - horizontal / 2 - vertical / 2 - focusDistance * w;
 
         lensRadius = aperture / 2;
-    }
-
-    inline double degreesToRadians(double degrees) {
-        return degrees * pi / 180.0;
     }
 
     Ray createRay(double s, double t) const {

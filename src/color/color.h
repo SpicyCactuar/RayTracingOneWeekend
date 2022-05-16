@@ -24,8 +24,4 @@ void writeColor(std::ostream& out, Color pixelColor, int samplesPerPixel) {
         << static_cast<int>(256 * std::clamp(b, 0.0, 0.999)) << '\n';
 }
 
-const Color red(1.0, 0.0, 0.0);
-const Color green(0.0, 1.0, 0.0);
-const Color blue(0.0, 0.0, 1.0);
-
 #endif //RAYTRACINGONEWEEKEND_COLOR_H

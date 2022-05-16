@@ -1,16 +1,17 @@
 #ifndef RAYTRACINGONEWEEKEND_SPHERE_H
 #define RAYTRACINGONEWEEKEND_SPHERE_H
 
+#include <utility>
+
 #include "../hit/hit.h"
 #include "../vector/vector3.h"
 #include "../material/material.h"
 
 class Sphere : public Hittable {
 public:
-    Sphere() {}
 
     Sphere(Point3 center, double radius, std::shared_ptr<Material> material) : center(center), radius(radius),
-                                                                               material(material) {};
+                                                                               material(std::move(material)) {};
 
     std::unique_ptr<HitRecord> hit(const Ray& ray, double tMin, double tMax) const override {
         // Finds t that satisfies the following quadratic equation:

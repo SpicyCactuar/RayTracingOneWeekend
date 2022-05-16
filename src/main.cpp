@@ -85,7 +85,7 @@ Color rayColor(const Ray& ray, const Hittable& world, int depth) {
     if (hit != nullptr) {
         Ray scattered;
         Color attenuation;
-        if (hit->material->scatter(ray, *hit.get(), attenuation, scattered)) {
+        if (hit->material->scatter(ray, *hit, attenuation, scattered)) {
             return attenuation * rayColor(scattered, world, depth - 1);
         }
         return Color(0, 0, 0);

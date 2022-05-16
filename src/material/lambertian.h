@@ -7,7 +7,7 @@ class Lambertian : public Material {
 public:
     Lambertian(const Color& a) : albedo(a) {}
 
-    virtual bool scatter(const Ray& rayIn, const HitRecord& hit, Color& attenuation, Ray& scattered) const override {
+    bool scatter(const Ray& rayIn, const HitRecord& hit, Color& attenuation, Ray& scattered) const override {
         auto scatterDirection = hit.normal + randomUnitVector();
 
         // Prevent direction opposite to normal

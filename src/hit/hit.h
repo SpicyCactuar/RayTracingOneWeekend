@@ -6,7 +6,7 @@
 
 struct HitRecord {
 
-    HitRecord();
+    HitRecord() = default;
 
     HitRecord(Point3 point, Vector3 normal, std::shared_ptr<Material> material, double t, bool frontFace) :
         point(point), normal(normal), material(std::shared_ptr<Material>(material)), t(t), frontFace(frontFace) {};

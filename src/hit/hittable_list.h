@@ -9,15 +9,13 @@ using std::shared_ptr;
 
 class HittableList : public Hittable {
 public:
-    HittableList() {}
+    HittableList() = default;
 
-    HittableList(shared_ptr<Hittable> object) { add(object); }
-
-    void add(shared_ptr<Hittable> hittable) { objects.push_back(hittable); }
+    void add(const shared_ptr<Hittable>& hittable) { objects.push_back(hittable); }
 
     void clear() { objects.clear(); }
 
-    std::unique_ptr<HitRecord> hit(const Ray& ray, double tMin, double tMax) const {
+    std::unique_ptr<HitRecord> hit(const Ray& ray, double tMin, double tMax) const override {
         std::unique_ptr<HitRecord> closestHit;
         auto closestSoFar = tMax;
 

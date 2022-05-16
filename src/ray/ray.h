@@ -6,7 +6,7 @@
 class Ray {
 
 public:
-    Ray() {}
+    Ray() = default;
 
     Ray(const Point3& origin, const Vector3& direction) : origin(origin), direction(direction) {}
 

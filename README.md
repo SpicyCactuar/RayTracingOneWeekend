@@ -8,19 +8,19 @@ The project uses [CMake](https://cmake.org/), set to C++17, as its build system.
 
 The following instructions assume CMake is already installed. The commands are meant for a Unix based OS, nevertheless they should run on Windows with the appropiate tweaks.
 
-Running the following command will create a `$YOUR_PATH_TO_PROJECT/cmake-build-release` folder:
+Running the following command will create a `$PATH_TO_PROJECT/cmake-build-release` folder:
 
-`$YOUR_PATH_TO_CMAKE -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" $YOUR_PATH_TO_PROJECT`
+`$PATH_TO_CMAKE -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" $PATH_TO_PROJECT`
 
 To then build build the release flavor:
 
-`$YOUR_PATH_TO_CMAKE --build $YOUR_PATH_TO_PROJECT/cmake-build-release --target RayTracingOneWeekend`
+`$PATH_TO_CMAKE --build $PATH_TO_PROJECT/cmake-build-release --target RayTracingOneWeekend`
 
 This will create a `cmake-build-release/RayTracingOneWeekend` executable. Finally, render the ray traced scene to an example `~/Desktop/image.ppm` file:
 
-`$YOUR_PATH_TO_PROJECT/cmake-build-release/RayTracingOneWeekend > ~/Desktop/image.ppm`
+`$PATH_TO_PROJECT/cmake-build-release/RayTracingOneWeekend > ~/Desktop/image.ppm`
 
-Users of CLion can simply compile using its tools. Do note that prior to compiling users should create a **Release** profile as the IDE only provides a default **Debug** one. Alternatively, the embedded version of CMake can be referenced by pointing the command to `$YOUR_PATH_TO_CLION/bin/cmake/$YOUR_OS/bin/cmake`.
+Users of CLion can simply compile using its tools. Do note that prior to compiling users should create a **Release** profile as the IDE only provides a default **Debug** one. Alternatively, the embedded version of CMake can be referenced by pointing the command to `$PATH_TO_CLION/bin/cmake/$OS/bin/cmake`.
 
 # Scene
 

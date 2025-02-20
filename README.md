@@ -1,6 +1,10 @@
-# Overview
+# Ray Tracing in One Weekend
+
+![Scene](https://user-images.githubusercontent.com/7926479/168508033-9fb740a9-8378-45ac-bf70-bc60b168addf.png)
 
 Implementation of the [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html) exercise. This codebase includes some naming and convention differences compared to the textbook implementation. The overall structure remains almost untouched therefore readers of the book should be able to navigate it with ease.
+
+Different results can be achieved by tweaking the scene in `main.cpp`.
 
 # Building & Running
 
@@ -21,11 +25,3 @@ This will create a `cmake-build-release/RayTracingOneWeekend` executable. Finall
 `$PATH_TO_PROJECT/cmake-build-release/RayTracingOneWeekend > ~/Desktop/image.ppm`
 
 Users of CLion can simply compile using its tools. Do note that prior to compiling users should create a **Release** profile as the IDE only provides a default **Debug** one. Alternatively, the embedded version of CMake can be referenced by pointing the command to `$PATH_TO_CLION/bin/cmake/$OS/bin/cmake`.
-
-# Scene
-
-The codebase as-is will yield the following scene:
-
-![image](https://user-images.githubusercontent.com/7926479/168508033-9fb740a9-8378-45ac-bf70-bc60b168addf.png)
-
-Different results can be achieved by tweaking the configuration values in `main.cpp`.
